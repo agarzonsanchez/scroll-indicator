@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./index.css";
 
 export default function ScrollIndicator({ url }) {
   const [data, setData] = useState([]);
@@ -50,7 +51,7 @@ export default function ScrollIndicator({ url }) {
   return (
     <div>
       <div className="top-container">
-        <h1>SCROLL INDICATOR APP</h1>
+        <h1 className="title">SCROLL INDICATOR APP</h1>
         <div className="scroll-progress-tracking-container">
           <div
             className="current-progress-bar"
