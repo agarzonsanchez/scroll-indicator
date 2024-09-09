@@ -25,4 +25,21 @@
 
 .data-container {
   margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  border: #000 solid 1px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px;
+}
+
+.data-container :hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #4444a3;
 }

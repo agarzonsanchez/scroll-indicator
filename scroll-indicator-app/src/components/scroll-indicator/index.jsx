@@ -49,7 +49,7 @@ export default function ScrollIndicator({ url }) {
     return <div>Loading... Please wait...</div>;
   }
   return (
-    <div>
+    <div className="main-wraper">
       <div className="top-container">
         <h1 className="title">SCROLL INDICATOR APP</h1>
         <div className="scroll-progress-tracking-container">
@@ -62,7 +62,14 @@ export default function ScrollIndicator({ url }) {
 
       <div className="data-container">
         {data && data.length > 0
-          ? data.map((item, index) => <p key={index}>{item.title}</p>)
+          ? data.map((item, index) => (
+              <div className="cards" key={index}>
+                <h3>{item.title}</h3>
+                <img src={item.thumbnail} alt={item.brand} />
+                <p>{item.description}</p>
+                <p>${item.price}</p>
+              </div>
+            ))
           : null}
       </div>
     </div>
